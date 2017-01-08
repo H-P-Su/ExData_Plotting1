@@ -10,3 +10,6 @@ feb_data$date_time = strptime(paste(feb_data$Date, feb_data$Time), format="%d/%m
 #feb_data <- feb_data %>% mutate(Date = dmy(old_date), Time = hms(old_time))
 
 # create plot
+png(filename = "plot1.png", width = 480, height = 480)
+hist(feb_data$Global_active_power, xlab = "Global Active Power (kilowatts)", ylab = "Frequency", col="red", main="Global Active Power")
+dev.off()
